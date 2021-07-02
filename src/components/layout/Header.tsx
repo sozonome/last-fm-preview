@@ -14,7 +14,7 @@ const Header = () => {
     >
       <Link to="/">
         <Heading as="h1" size="sm">
-          vite-react-chakra-starter
+          music explore
         </Heading>
       </Link>
 

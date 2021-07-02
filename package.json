@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prettify": "prettier --write src"
+    "format": "prettier --write src",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.4",
@@ -15,12 +17,19 @@
     "@emotion/styled": "^11.3.0",
     "@fontsource/inter": "^4.4.5",
     "@fontsource/raleway": "^4.4.5",
+    "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "swr": "^0.5.6"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@types/node": "^15.12.4",
@@ -29,7 +38,10 @@
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
     "@vitejs/plugin-react-refresh": "^1.3.3",
-    "prettier": "^2.3.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "standard-version": "^9.3.0",
     "typescript": "^4.3.2",
     "vite": "^2.3.7"
   }
