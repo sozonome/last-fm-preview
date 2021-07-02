@@ -18,3 +18,4 @@ yarn dev
 - [vite](https://vitejs.dev)
 - [Chakra UI](https://chakra-ui.com/)
 - [TypeScript](https://www.typescriptlang.org)
+- [last.fm API Docs](https://www.last.fm/api)
