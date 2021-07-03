@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import { Image, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
@@ -32,15 +32,15 @@ const Header = () => {
         gridGap={2}
       >
         <Link to="/">
-          <Heading
-            as="h1"
-            size="sm"
-            display="flex"
-            alignItems="center"
-            gridGap={2}
-          >
-            <Image src="/assets/music.svg" width={10} /> music explore
-          </Heading>
+          <Flex gridGap={2} alignItems="center">
+            <Image src="/assets/music.svg" width={10} />
+            <Box>
+              <Heading as="h1" size="md" display="flex" alignItems="center">
+                museec
+              </Heading>
+              <Text fontSize="sm">music explore</Text>
+            </Box>
+          </Flex>
         </Link>
 
         <Box marginLeft="auto">
