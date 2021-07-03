@@ -13,7 +13,7 @@ import {
   SearchArtistResponse,
 } from "./types/search";
 
-export const useTopArtists = (params: GetTopArtistsRequestParams) =>
+export const useTopArtists = (params?: GetTopArtistsRequestParams) =>
   useLastFMSWRHook<GetTopArtistsResponse, GetTopArtistsRequestParams>(
     "chart.gettopartists",
     params

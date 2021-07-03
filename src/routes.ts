@@ -1,6 +1,7 @@
+import { lazy } from "react";
 import { RouteProps } from "react-router-dom";
 
-import Home from "components/home";
+const Home = lazy(() => import("components/home"));
 
 export const routes: Array<RouteProps> = [
   {

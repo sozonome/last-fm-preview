@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Suspense } from "react";
 
 import Layout from "components/layout";
 import PrivateRoute from "components/route/PrivateRoute";
@@ -10,18 +11,20 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Switch>
-          {routes.map((routeProps, index) => (
-            <Route exact {...routeProps} key={index} />
-          ))}
-          {privateRoutes.map((privateRouteProps, index) => (
-            <PrivateRoute
-              {...privateRouteProps}
-              key={`privateRoute-${index}`}
-            />
-          ))}
-          <Route component={Page404} />
-        </Switch>
+        <Suspense fallback={<></>}>
+          <Switch>
+            {routes.map((routeProps, index) => (
+              <Route exact {...routeProps} key={index} />
+            ))}
+            {privateRoutes.map((privateRouteProps, index) => (
+              <PrivateRoute
+                {...privateRouteProps}
+                key={`privateRoute-${index}`}
+              />
+            ))}
+            <Route component={Page404} />
+          </Switch>
+        </Suspense>
       </Layout>
     </Router>
   );

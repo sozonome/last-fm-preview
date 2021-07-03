@@ -1,11 +1,11 @@
-import { Flex, Link, Text } from "@chakra-ui/layout";
+import { Box, Link, Text } from "@chakra-ui/layout";
 
 const Footer = () => {
   return (
-    <Flex
+    <Box
       as="footer"
       width="full"
-      align="center"
+      marginY={8}
       alignSelf="flex-end"
       justifyContent="center"
     >
@@ -15,7 +15,14 @@ const Footer = () => {
           sznm.dev
         </Link>
       </Text>
-    </Flex>
+      <Text fontSize="xs">
+        Powered by{" "}
+        <Link href="https://last.fm" isExternal>
+          last.fm
+        </Link>{" "}
+        API
+      </Text>
+    </Box>
   );
 };
 
