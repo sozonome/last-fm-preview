@@ -1,12 +1,8 @@
 import useSWR from "swr";
 
-import { SWRHookResp } from "functions/swr/types";
-import {
-  LastFMApiDefaultParams,
-  LastFMApiMandatoryParams,
-  LastFMApiRequiredParams,
-} from "./types";
 import { fetcher } from "functions/swr/fetcher";
+
+import { SWRHookResp } from "functions/swr/types";
 
 enum LastFMApiMethods {
   "chart.gettoptracks",

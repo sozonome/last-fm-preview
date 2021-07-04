@@ -30,7 +30,7 @@ const TopArtists = () => {
                 key={singleArtist.name}
               >
                 <Text>{index + 1}.</Text>
-                <NavLink to="/">
+                <NavLink to={`/music/${singleArtist.name}`}>
                   <Text
                     fontSize="lg"
                     fontWeight="bold"

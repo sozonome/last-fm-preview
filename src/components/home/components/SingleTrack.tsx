@@ -25,7 +25,7 @@ const SingleTrack = ({ track, index }: SingleTrackProps) => {
             {track.name}
           </Text>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to={`/music/${track.artist.name}`}>
           <Text
             _hover={{
               textDecoration: "underline ",

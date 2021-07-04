@@ -21,7 +21,7 @@ export const useTopArtists = (params?: GetTopArtistsRequestParams) =>
 
 export const useArtistInfo = (params: GetArtisInfoRequestParams) =>
   useLastFMSWRHook<GetArtisInfoResponse, GetArtisInfoRequestParams>(
-    "track.getinfo",
+    "artist.getinfo",
     params
   );
 
